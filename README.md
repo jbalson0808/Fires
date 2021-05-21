@@ -9,6 +9,7 @@ fires_raw_coords.csv - list of all Southern California fires within the MGRS loc
 Notebooks:    
 WeatherCall_Meteomatics.ipynb - gets weather data from 2000-2015 for all MGRS locations in Southern California.  File too large for github.  Save .csv that is output from notebook to personal drive     
 
+example import of WeatherCall_Meteomatics .csv output:           
 weather = pd.read_csv('2000to2015_Weather_v2.csv')
 weather.info()   
 
@@ -16,7 +17,6 @@ weather.info()
 RangeIndex: 2249940 entries, 0 to 2249939   
 Data columns (total 14 columns):   
      Column                         Dtype     
----  ------                         -----     
  0   Unnamed: 0                     int64     
  1   lat                            float64   
  2   lon                            float64   
