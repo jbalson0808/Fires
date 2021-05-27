@@ -1,3 +1,5 @@
+# Predict Forest Fires in Southern California       
+
 Import Data: Need to copy and paste sqllite file from Kaggle into local drive path.
 FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 
@@ -16,6 +18,7 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 * Train/Test Split
      * Use years 2003 - 2012 for training and years 2013 - 2015 for testing
 * Some things to try for modeling:
+     * Sample data set for quicker run times
      * Remove outliers
      * Balance the target data for better predictions
           * Over sample
