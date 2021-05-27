@@ -5,9 +5,12 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 
 # Main Notebooks:        
 * WeatherCall_Meteomatics - Get raw weather data from meteomatics website              
-* preprocessing_weather - Adds rolling averages and population density.  Output csv too large for github, will output to your notebook folder (weather_clean.csv).     
-* preprocessing_fires - Adds all dates and all 385 MGRS locations to the fires Kaggle data.  Also adds fires_past3yrs rolling sum by MGRS block.  Output csv too large for github, will output to your notebook folder (fires_clean.csv).                   
-* merge_fires_weather - Merges the weather and fires output csv files together.  Removes months Dec. - Mar. and also years 2000 - 2003.  Years removed due to fires_past3yrs rolling sum.  Output csv too large for github, will output to your notebook folder (data_clean.csv).    
+* preprocessing_weather - Adds rolling averages and population density.  Output csv too large for github, will output to your notebook folder.      
+    *  Output: weather_clean.csv     
+* preprocessing_fires - Adds all dates and all 385 MGRS locations to the fires Kaggle data.  Also adds fires_past3yrs rolling sum by MGRS block.  Output csv too large for github, will output to your notebook folder.          
+    *  Output: fires_clean.csv                   
+* merge_fires_weather - Merges the weather and fires output csv files together.  Removes months Dec. - Mar. and also years 2000 - 2003.  Years removed due to fires_past3yrs rolling sum.  Output csv too large for github, will output to your notebook folder.    
+    *  Output: data_clean.csv     
 
 # SQL Query for Target Day Lags:
 * Run data_clean.csv through SQL query to lag the fire occurances by 1, 2, 3, 4, and 5 days
