@@ -32,6 +32,9 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
      * Grid search, hyper tuning
 
 # Analysis Folder:       
+* fires5 notebook       
+   * Very basic EDA
+
 * Fire band analysis    
    * Group MGRS blocks into 5 bands    
       * None, Low, Medium, High, Extreme
