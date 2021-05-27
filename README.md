@@ -18,7 +18,7 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
    * SQL query output file will be in our shared Google drive   
 
 # ToDo:
-* Use file resulting from SQL query to build model.  There are 5 targets, is_fire_lag1, is_fire_lag2, ..., is_fire_lag5.
+* Use file resulting from SQL query to build model.  There are 5 targets, is_fire_lag1, is_fire_lag2, ... , is_fire_lag5.
           
 * Train/Test Split
      * Use years 2003 - 2012 for training and years 2013 - 2015 for testing
