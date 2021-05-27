@@ -4,7 +4,8 @@ Import Data: Need to copy and paste sqllite file from Kaggle into local drive pa
 FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 
 # Main Notebooks:        
-* WeatherCall_Meteomatics - Get raw weather data from meteomatics website              
+* WeatherCall_Meteomatics - Get raw weather data from meteomatics website     
+    *  Output: 2000to2015_Weather_v2.csv          
 * preprocessing_weather - Adds rolling averages and population density.  Output csv too large for github, will output to your notebook folder.      
     *  Output: weather_clean.csv     
 * preprocessing_fires - Adds all dates and all 385 MGRS locations to the fires Kaggle data.  Also adds fires_past3yrs rolling sum by MGRS block.  Output csv too large for github, will output to your notebook folder.          
