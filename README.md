@@ -11,7 +11,11 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 * preprocessing_fires - Adds all dates and all 385 MGRS locations to the fires Kaggle data.  Also adds fires_past3yrs rolling sum by MGRS block.  Output csv too large for github, will output to your notebook folder.          
     *  Output: fires_clean.csv                   
 * merge_fires_weather - Merges the weather and fires output csv files together.  Removes months Dec. - Mar. and also years 2000 - 2003.  Years removed due to fires_past3yrs rolling sum.  Output csv too large for github, will output to your notebook folder.    
-    *  Output: data_clean.csv     
+    *  Output: data_clean.csv  
+
+# Main Files:
+* mgrs_final.csv
+   * Master file for the 385 MGRS locations to be used in the model.
 
 # SQL Query for Target Day Lags:
 * Run data_clean.csv through SQL query to lag the fire occurances by 1, 2, 3, 4, and 5 days     
