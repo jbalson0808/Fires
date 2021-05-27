@@ -32,4 +32,15 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
      * Grid search, hyper tuning
 
 # Analysis Folder:       
-* 
+* Fire band analysis    
+   * Group MGRS blocks into 5 bands    
+      * None, Low, Medium, High, Extreme
+    
+* Fires Raw
+   * Used for plotting actual fire locations over MGRS blocks.  For data viz
+
+* Population density
+   * Adding population dimension to analysis.  Also for data viz
+
+* Soil type
+   * Analysis on missing soil types
