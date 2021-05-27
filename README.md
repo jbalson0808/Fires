@@ -13,13 +13,15 @@ FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
     *  Output: data_clean.csv     
 
 # SQL Query for Target Day Lags:
-* Run data_clean.csv through SQL query to lag the fire occurances by 1, 2, 3, 4, and 5 days
+* Run data_clean.csv through SQL query to lag the fire occurances by 1, 2, 3, 4, and 5 days     
+   * SQL query output file will be in our shared Google drive   
 
 # ToDo:
 * Use file resulting from SQL query to build model.  There are 5 targets, is_fire_lag1, is_fire_lag2, ..., is_fire_lag5.
-     * SQL query output file will be in our shared Google drive       
+          
 * Train/Test Split
      * Use years 2003 - 2012 for training and years 2013 - 2015 for testing
+
 * Some things to try for modeling:
      * Sample data set for quicker run times
      * Remove outliers
