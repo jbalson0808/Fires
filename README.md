@@ -1,36 +1,26 @@
-# fires
 Import Data: Need to copy and paste sqllite file from Kaggle into local drive path.
 FPA_FOD_20170508.sqlite https://www.kaggle.com/rtatman/188-million-us-wildfires
 
-Data Files:  
-mgrs_final.csv - final 10km MGRS locations used for Southern California.  385 total MGRS locations     
-fires_raw_coords.csv - list of all Southern California fires within the MGRS locations.  Raw coords, not the MGRS lat/lon
+# Main Notebooks:        
+* WeatherCall_Meteomatics - Get raw weather data from meteomatics website              
+* preprocessing_weather - Adds rolling averages and population density.  Output csv too large for github, will output to your notebook folder (weather_clean.csv).     
+* preprocessing_fires - Adds all dates and all 385 MGRS locations to the fires Kaggle data.  Also adds fires_past3yrs rolling sum by MGRS block.  Output csv too large for github, will output to your notebook folder (fires_clean.csv).                   
+* merge_fires_weather - Merges the weather and fires output csv files together.  Removes months Dec. - Mar. and also years 2000 - 2003.  Years removed due to fires_past3yrs rolling sum.  Output csv too large for github, will output to your notebook folder (data_clean.csv).    
 
-Notebooks:    
-WeatherCall_Meteomatics.ipynb - gets weather data from 2000-2015 for all MGRS locations in Southern California.  File too large for github.  Save .csv that is output from notebook to personal drive     
+# SQL Query for Target Day Lags:
+* Run data_clean.csv through SQL query to lag the fire occurances by 1, 2, 3, 4, and 5 days
 
-example import of WeatherCall_Meteomatics .csv output:           
-weather = pd.read_csv('2000to2015_Weather_v2.csv')
-weather.info()   
+# ToDo:
+* Use file resulting from SQL query to build model.  There are 5 targets, is_fire_lag1, is_fire_lag2, ..., is_fire_lag5.
+     * SQL query output file will be in our shared Google drive       
+* Train/Test Split
+     * Use years 2003 - 2012 for training and years 2013 - 2015 for testing
+* Some things to try for modeling:
+     * Remove outliers
+     * Balance the target data for better predictions
+          * Over sample
+          * Under sample
+     * Grid search, hyper tuning
 
-<class 'pandas.core.frame.DataFrame'>   
-RangeIndex: 2249940 entries, 0 to 2249939   
-Data columns (total 14 columns):   
-     Column                         Dtype     
- 0   Unnamed: 0                     int64     
- 1   lat                            float64   
- 2   lon                            float64   
- 3   t_mean_2m_24h:F                float64   
- 4   t_min_2m_24h:F                 float64   
- 5   t_max_2m_24h:F                 float64   
- 6   precip_24h:mm                  float64   
- 7   sunshine_duration_24h:min      float64   
- 8   drought_index:idx              float64   
- 9   soil_moisture_index_-15cm:idx  float64   
- 10  soil_type:idx                  float64   
- 11  wind_speed_2m:mph              float64   
- 12  elevation:m                    float64   
- 13  date                           object    
-
-fires_model_v1.ipynb - gets fire, weather, and location data.  Merges data, train/test split, scale, grid search, fit, predict
-
+# Analysis Folder:       
+* 
